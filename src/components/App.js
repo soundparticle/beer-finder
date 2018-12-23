@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Router, Switch, Redirect, Route } from 'react-router-dom'; 
 
+import Home from '../components/Home';
 
 class App extends Component {
     render() {
@@ -9,6 +10,7 @@ class App extends Component {
                 <div>
                     <header>
                         {/* <Header onSearch={this.handleSearch}/> */}
+                        <h1>Beer finder</h1>
                     </header>
 
                     <main>
