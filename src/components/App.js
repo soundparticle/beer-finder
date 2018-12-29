@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Redirect, Route } from 'react-router-dom'; 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Redirect,
+    Route
+} from 'react-router-dom';
 import Header from './Header';
 import Home from './Home';
 
@@ -9,21 +14,19 @@ class App extends Component {
             <Router>
                 <div>
                     <header>
-                        <Header onSearch={this.handleSearch}/>
+                        <Header onSearch={this.handleSearch} />
                         <h1>Beer finder</h1>
                     </header>
 
                     <main>
                         <Switch>
-                            <Route exact path="/" component={Home}/>
+                            <Route exact path="/" component={Home} />
                             {/* <Route exact path="/favorites" Component={Favorites}/> */}
                             {/* {Route exact path="/results" component={Results}/> */}
-                            <Redirect to="/"/>
+                            <Redirect to="/" />
                         </Switch>
                     </main>
-                
                 </div>
-
             </Router>
         );
     }
