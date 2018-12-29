@@ -10,7 +10,7 @@ class App extends Component {
                 <div>
                     <header>
                         <Header onSearch={this.handleSearch}/>
-                        <h1>Beer finder</h1>
+                        <h1>Beer Fan</h1>
                     </header>
 
                     <main>

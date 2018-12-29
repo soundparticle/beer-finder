@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
+// import { get } from '../services/request';
 
-const Home = () => {
-    return (
-        <div>
-            Home
-        </div>
-    );
-};
+class Home extends Component {
+    componentDidMount() {
+        
+    }
+    
+    render() {
+        return (
+            <div>
+                Home
+    
+    
+            </div>
+        );
+    }    
+}
 
 export default Home;
