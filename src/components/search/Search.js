@@ -25,7 +25,7 @@ class Search extends Component {
 
         const { history } = this.props;
         history.push({
-            pathname: './beers',
+            pathname: './artists',
             search: qs.stringify({ search })
         });
     };

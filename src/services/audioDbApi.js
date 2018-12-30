@@ -1,9 +1,9 @@
 import { get } from './request';
-const API_KEY = '37db54f6937fb888a293d0026987152a';
-const API_QUERY = `key=${API_KEY}`;
-const BASE_URL = 'https://sandbox-api.brewerydb.com/v2/';
-const ENDPOINT = 'beers';
-const EVERYTHING_URL = `${BASE_URL}${ENDPOINT}/?${API_QUERY}`;
+const API_KEY = '195003';
+const API_QUERY = 'searchalbum.php?s=';
+const BASE_URL = 'theaudiodb.com/api/v1/json/';
+// const ARTIST = 'u2';
+const EVERYTHING_URL = `${BASE_URL}${API_KEY}/${API_QUERY}`;
 
 export const getUrl = url => {
     const json = window.localStorage.getItem(url);
@@ -26,9 +26,9 @@ export function search({ search }, { page }) {
     return get(`${EVERYTHING_URL}&${searchTerm}${paging}`);
 }
 
-export function getBeers(id) {
-    if(id){
-        return getUrl(`${EVERYTHING_URL}&i=${id}`);
+export function getArtistDetails(name) {
+    if(name){
+        return getUrl(`${EVERYTHING_URL}${name}`);
     }
     else {
         return getUrl(EVERYTHING_URL);
